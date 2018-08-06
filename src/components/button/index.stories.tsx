@@ -3,4 +3,4 @@ import * as React from 'react'
 
 import BasicButton from '.'
 
-storiesOf('button/BasicButton', module).add('default', () => <BasicButton />)
+storiesOf('button/BasicButton', module).add('default', () => <BasicButton>example</BasicButton>)

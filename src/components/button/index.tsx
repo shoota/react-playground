@@ -1,7 +1,9 @@
-import React from 'react'
+import styled from 'styled-components'
 
-const BasciButton :React.SFC = () => {
-    return <button>push</button>
-}
+const BasicButton = styled.button`
+	background: #f6f6f6;
+	color: #000;
+	font-size: 2rem;
+`
 
-export default BasciButton
+export default BasicButton
