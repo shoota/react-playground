@@ -52,7 +52,7 @@
   "dependencies": {
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
-    "styled-components": "3.4.2",
+    "styled-components": "3.4.4",
     "tslint-react": "^3.6.0"
   },
   "lint-staged": {
