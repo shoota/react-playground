@@ -34,7 +34,7 @@
     "@types/storybook__addon-actions": "3.4.1",
     "@types/storybook__addon-knobs": "3.4.1",
     "@types/storybook__react": "3.0.9",
-    "awesome-typescript-loader": "5.2.0",
+    "awesome-typescript-loader": "5.2.1",
     "babel-core": "6.26.3",
     "babel-runtime": "6.26.0",
     "husky": "0.14.3",
