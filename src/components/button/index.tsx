@@ -1,9 +1,16 @@
-import styled from 'styled-components'
+import { Button } from 'antd'
+import * as React from 'react'
 
-const BasicButton = styled.button`
-	background: #f6f6f6;
-	color: #000;
-	font-size: 2rem;
-`
+export type Props = {
+	innerText: string
+}
+
+const BasicButton = ({innerText} : Props) => {
+	return (
+		<Button>
+			{innerText}
+		</Button>
+	)
+}
 
 export default BasicButton
