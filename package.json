@@ -4,7 +4,7 @@
   "description": "よりうまい肉を食うぞ",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
+    "test": "echo 'not available'",
     "precommit": "lint-staged",
     "lint": "tslint 'src/**/*.ts{,x}'",
     "storybook": "start-storybook -p 6006",
