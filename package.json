@@ -54,7 +54,7 @@
     "typescript": "3.2.1"
   },
   "dependencies": {
-    "antd": "3.10.9",
+    "antd": "3.11.0",
     "react": "16.6.3",
     "react-dom": "16.6.3",
     "styled-components": "4.1.2",
