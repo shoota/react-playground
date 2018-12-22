@@ -28,7 +28,7 @@
     "@storybook/cli": "4.0.12",
     "@storybook/react": "4.0.12",
     "@types/jest": "23.3.10",
-    "@types/react": "16.7.17",
+    "@types/react": "16.7.18",
     "@types/react-dom": "16.0.11",
     "@types/react-test-renderer": "16.0.3",
     "@types/storybook__addon-actions": "3.4.1",
