@@ -44,7 +44,7 @@
     "less-loader": "5.0.0",
     "lint-staged": "9.2.0",
     "prettier": "1.18.2",
-    "react-test-renderer": "16.8.3",
+    "react-test-renderer": "16.8.6",
     "style-loader": "0.23.1",
     "ts-jest": "24.0.2",
     "ts-node": "8.3.0",
@@ -55,8 +55,8 @@
   },
   "dependencies": {
     "antd": "3.20.3",
-    "react": "16.8.3",
-    "react-dom": "16.8.3",
+    "react": "16.8.6",
+    "react-dom": "16.8.6",
     "styled-components": "4.3.2",
     "tslint-react": "^4.0.0"
   },
