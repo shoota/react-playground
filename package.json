@@ -45,7 +45,7 @@
     "lint-staged": "9.2.1",
     "prettier": "1.18.2",
     "react-test-renderer": "16.8.6",
-    "style-loader": "0.23.1",
+    "style-loader": "1.0.0",
     "ts-jest": "24.0.2",
     "ts-node": "8.3.0",
     "tslint": "5.18.0",
