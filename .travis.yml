@@ -13,7 +13,7 @@ stages:
 - name: deploy
 jobs:
   include:
-  - stage: test
+  - stage: lint
     env: lint
     script:
     - yarn lint
