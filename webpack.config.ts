@@ -1,0 +1,97 @@
+import path from 'path'
+
+import webpack, { ConfigurationFactory } from 'webpack'
+import { Configuration as DevServerConfiguration } from 'webpack-dev-server'
+import MiniCssExtractPlugin from 'mini-css-extract-plugin'
+
+const config: ConfigurationFactory = (_env, { mode }) => {
+  const plugins = [
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.ProgressPlugin(),
+    new MiniCssExtractPlugin({
+      filename: '[name].css',
+      chunkFilename: '[id].css',
+      ignoreOrder: false,
+    }),
+  ]
+  const devServer: DevServerConfiguration = {
+    publicPath: '/',
+    contentBase: path.resolve(__filename, '../', 'public'),
+    host: '0.0.0.0',
+    port: 3035,
+    disableHostCheck: true,
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+    },
+    open: false,
+    inline: true,
+    hot: true,
+  }
+  return {
+    entry: {
+      app: './src/index.tsx',
+    },
+    output: {
+      publicPath: '/',
+      path: path.resolve(__filename, '../', 'public'),
+      filename: '[name].js',
+    },
+    plugins,
+    module: {
+      rules: [
+        {
+          test: /\.tsx?$/,
+          loader: 'babel-loader',
+          include: [path.resolve(__dirname)],
+          exclude: [/node_modules/],
+          options: {
+            cacheDirectory: true,
+            envName: mode || 'development',
+          },
+        },
+        {
+          test: /\.less$/,
+          use: [
+            {
+              loader: MiniCssExtractPlugin.loader,
+            },
+            'css-loader',
+            {
+              loader: 'less-loader',
+              // https://github.com/ant-design/ant-design/issues/7927
+              options: { javascriptEnabled: true },
+            },
+          ],
+        },
+      ],
+    },
+    optimization: {
+      splitChunks: {
+        cacheGroups: {
+          vendors: {
+            priority: -10,
+            test: /[\\/]node_modules[\\/]/,
+          },
+        },
+
+        chunks: 'async',
+        minChunks: 1,
+        minSize: 30000,
+        name: true,
+      },
+    },
+    // eslint-disable-next-line
+    // @ts-ignore
+    devServer,
+    resolve: {
+      alias: {
+        'react-dom': '@hot-loader/react-dom',
+      },
+      extensions: ['.tsx', '.ts', '.js', '.jsx'],
+      modules: ['./node_modules', path.resolve(__dirname)],
+    },
+  }
+}
+
+// eslint-disable-next-line import/no-default-export
+export default config
