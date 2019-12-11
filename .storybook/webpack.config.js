@@ -3,8 +3,13 @@ module.exports = {
     rules: [
       {
         test: /\.tsx?$/,
-        loader: 'awesome-typescript-loader',
-        exclude: /node_modules/
+        exclude: /node_modules/,
+        use: [
+          {
+            loader: 'babel-loader',
+            options: { cacheDirectory: true, compact: true },
+          },
+        ],
       },
       {
         test: /\.less$/,

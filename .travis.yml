@@ -13,7 +13,7 @@ stages:
 - name: deploy
 jobs:
   include:
-  - stage: test
+  - stage: lint
     env: lint
     script:
     - yarn lint
@@ -28,7 +28,7 @@ jobs:
     deploy:
       provider: pages
       skip-cleanup: true
-      github-token: "$GITHUB_TOKEN"
+      github-token: $GITHUB_TOKEN
       keep-history: true
       local-dir: storybook-static
       on:
