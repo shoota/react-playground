@@ -2,6 +2,7 @@ import path from 'path'
 
 import webpack, { ConfigurationFactory } from 'webpack'
 import { Configuration as DevServerConfiguration } from 'webpack-dev-server'
+import HtmlWebpackPlugin from 'html-webpack-plugin'
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 
 const config: ConfigurationFactory = (_env, { mode }) => {
@@ -13,6 +14,7 @@ const config: ConfigurationFactory = (_env, { mode }) => {
       chunkFilename: '[id].css',
       ignoreOrder: false,
     }),
+    new HtmlWebpackPlugin({ template: './src/index.html' }),
   ]
   const devServer: DevServerConfiguration = {
     publicPath: '/',
@@ -62,6 +64,10 @@ const config: ConfigurationFactory = (_env, { mode }) => {
               options: { javascriptEnabled: true },
             },
           ],
+        },
+        {
+          test: /\.html$/,
+          loader: 'html-loader',
         },
       ],
     },
