@@ -4,17 +4,19 @@ import webpack, { ConfigurationFactory } from 'webpack'
 import { Configuration as DevServerConfiguration } from 'webpack-dev-server'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
+import { CleanWebpackPlugin } from 'clean-webpack-plugin'
 
 const config: ConfigurationFactory = (_env, { mode }) => {
   const plugins = [
     new webpack.HotModuleReplacementPlugin(),
     new webpack.ProgressPlugin(),
     new MiniCssExtractPlugin({
-      filename: '[name].css',
+      filename: '[name]-[hash].css',
       chunkFilename: '[id].css',
       ignoreOrder: false,
     }),
     new HtmlWebpackPlugin({ template: './src/index.html' }),
+    new CleanWebpackPlugin(),
   ]
   const devServer: DevServerConfiguration = {
     publicPath: '/',
@@ -36,7 +38,7 @@ const config: ConfigurationFactory = (_env, { mode }) => {
     output: {
       publicPath: '/',
       path: path.resolve(__filename, '../', 'public'),
-      filename: '[name].js',
+      filename: '[name]-[hash].js',
     },
     plugins,
     module: {
