@@ -13,23 +13,28 @@ stages:
 - name: deploy
 jobs:
   include:
-  - stage: lint
-    env: lint
+  - stage: Test
+    name: "lint"
     script:
     - yarn lint
-  - stage: test
-    env: Test
+  -
     script:
     - yarn test
-  - stage: deploy
-    env: gh-page
+    name: "test"
+  -
     script:
     - yarn build-storybook
+    name: "build storybook"
+  - stage: deploy
+    name: "deploy to gh-page"
+    env: gh-page
+    script:
+    - yarn build
     deploy:
       provider: pages
       skip-cleanup: true
       github-token: $GITHUB_TOKEN
       keep-history: true
-      local-dir: storybook-static
+      local-dir: public
       on:
         branch: master
