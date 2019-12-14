@@ -14,15 +14,19 @@ stages:
 jobs:
   include:
   - stage: Test
+    name: "lint"
     script:
     - yarn lint
   -
     script:
     - yarn test
+    name: "test"
   -
     script:
     - yarn build-storybook
+    name: "build storybook"
   - stage: deploy
+    name: "deploy to gh-page"
     env: gh-page
     script:
     - yarn build
