@@ -16,8 +16,10 @@ jobs:
   - stage: Test
     script:
     - yarn lint
+  -
     script:
     - yarn test
+  -
     script:
     - yarn build-storybook
   - stage: deploy
