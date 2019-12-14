@@ -4276,7 +4276,6 @@ a.ant-btn-sm {
 .ant-cascader-menus ul,
 .ant-cascader-menus ol {
   margin: 0;
-  padding: 0;
   list-style: none;
 }
 .ant-cascader-menus-empty,
@@ -4302,7 +4301,7 @@ a.ant-btn-sm {
   min-width: 111px;
   height: 180px;
   margin: 0;
-  padding: 0;
+  padding: 4px 0;
   overflow: auto;
   vertical-align: top;
   list-style: none;
@@ -16048,6 +16047,7 @@ span.ant-radio + * {
 .ant-select-dropdown-menu {
   max-height: 250px;
   margin-bottom: 0;
+  padding: 4px 0;
   padding-left: 0;
   overflow: auto;
   list-style: none;
@@ -16078,6 +16078,7 @@ span.ant-radio + * {
   overflow: hidden;
   color: rgba(0, 0, 0, 0.65);
   font-weight: normal;
+  font-size: 14px;
   line-height: 22px;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -16086,12 +16087,6 @@ span.ant-radio + * {
 }
 .ant-select-dropdown-menu-item:hover:not(.ant-select-dropdown-menu-item-disabled) {
   background-color: #e6f7ff;
-}
-.ant-select-dropdown-menu-item:first-child {
-  border-radius: 4px 4px 0 0;
-}
-.ant-select-dropdown-menu-item:last-child {
-  border-radius: 0 0 4px 4px;
 }
 .ant-select-dropdown-menu-item-selected {
   color: rgba(0, 0, 0, 0.65);
