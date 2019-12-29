@@ -17447,7 +17447,7 @@ span.ant-radio + * {
   border-bottom: 1px solid #e8e8e8;
   transition: background 0.3s ease;
 }
-.ant-table-thead > tr > th[colspan] {
+.ant-table-thead > tr > th[colspan]:not([colspan='1']) {
   text-align: center;
 }
 .ant-table-thead > tr > th .anticon-filter,
@@ -18410,7 +18410,6 @@ tr.ant-table-expanded-row td > .ant-table-wrapper {
   height: 2px;
   background-color: #1890ff;
   transform-origin: 0 0;
-  opacity: 0;
 }
 .ant-tabs-bar {
   margin: 0 0 16px 0;
@@ -18767,13 +18766,11 @@ tr.ant-table-expanded-row td > .ant-table-wrapper {
 }
 .ant-tabs-top .ant-tabs-ink-bar-animated,
 .ant-tabs-bottom .ant-tabs-ink-bar-animated {
-  opacity: 1;
-  transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1), width 0.2s cubic-bezier(0.645, 0.045, 0.355, 1), left 0.3s cubic-bezier(0.645, 0.045, 0.355, 1), opacity 0.3s;
+  transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1), width 0.2s cubic-bezier(0.645, 0.045, 0.355, 1), left 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 .ant-tabs-left .ant-tabs-ink-bar-animated,
 .ant-tabs-right .ant-tabs-ink-bar-animated {
-  opacity: 1;
-  transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1), height 0.2s cubic-bezier(0.645, 0.045, 0.355, 1), top 0.3s cubic-bezier(0.645, 0.045, 0.355, 1), opacity 0.3s;
+  transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1), height 0.2s cubic-bezier(0.645, 0.045, 0.355, 1), top 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 .no-flex > .ant-tabs-content > .ant-tabs-content-animated,
 .ant-tabs-no-animation > .ant-tabs-content > .ant-tabs-content-animated {
@@ -20226,7 +20223,6 @@ span.ant-transfer-list-search-action {
   outline: none;
   cursor: pointer;
 }
-.ant-tree li span.ant-tree-switcher:empty,
 .ant-tree li span.ant-tree-iconEle:empty {
   display: none;
 }
