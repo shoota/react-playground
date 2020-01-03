@@ -15182,7 +15182,6 @@ textarea.ant-pagination-options-quick-jumper input {
   list-style: none;
   font-feature-settings: 'tnum';
   display: inline-block;
-  line-height: unset;
 }
 .ant-radio-wrapper {
   box-sizing: border-box;
@@ -17203,6 +17202,36 @@ span.ant-radio + * {
 .ant-steps-navigation .ant-steps-item.ant-steps-item-active::before {
   left: 0;
   width: 100%;
+}
+@media (max-width: 480px) {
+  .ant-steps-navigation > .ant-steps-item {
+    margin-right: 0 !important;
+  }
+  .ant-steps-navigation > .ant-steps-item::before {
+    display: none;
+  }
+  .ant-steps-navigation > .ant-steps-item.ant-steps-item-active::before {
+    top: 0;
+    right: 0;
+    left: unset;
+    display: block;
+    width: 3px;
+    height: calc(100% - 24px);
+  }
+  .ant-steps-navigation > .ant-steps-item::after {
+    position: relative;
+    top: -2px;
+    left: 50%;
+    display: block;
+    width: 8px;
+    height: 8px;
+    margin-bottom: 8px;
+    text-align: center;
+    transform: rotate(135deg);
+  }
+  .ant-steps-navigation > .ant-steps-item > .ant-steps-item-container > .ant-steps-item-tail {
+    visibility: hidden;
+  }
 }
 .ant-steps-flex-not-supported.ant-steps-horizontal.ant-steps-label-horizontal .ant-steps-item {
   margin-left: -16px;
