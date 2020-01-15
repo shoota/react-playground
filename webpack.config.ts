@@ -27,6 +27,9 @@ const config: ConfigurationFactory = (_env, { mode }) => {
     headers: {
       'Access-Control-Allow-Origin': '*',
     },
+    historyApiFallback: {
+      rewrites: [{ from: /^\/*/, to: '/index.html' }],
+    },
     open: false,
     inline: true,
     hot: true,
@@ -88,18 +91,15 @@ const config: ConfigurationFactory = (_env, { mode }) => {
         name: true,
       },
     },
-    // eslint-disable-next-line
-    // @ts-ignore
     devServer,
     resolve: {
       alias: {
         'react-dom': '@hot-loader/react-dom',
       },
       extensions: ['.tsx', '.ts', '.js', '.jsx'],
-      modules: ['./node_modules', path.resolve(__dirname)],
+      modules: ['./node_modules', path.resolve(__dirname, '.', 'src')],
     },
   }
 }
 
-// eslint-disable-next-line import/no-default-export
 export default config
