@@ -1854,7 +1854,7 @@ html {
   height: 20px;
   transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
-.ant-scroll-number-only > p {
+.ant-scroll-number-only > p.ant-scroll-number-only-unit {
   height: 20px;
   margin: 0;
 }
@@ -17050,7 +17050,7 @@ span.ant-radio + * {
   line-height: 1.5;
 }
 .ant-steps-label-vertical.ant-steps-small:not(.ant-steps-dot) .ant-steps-item-icon {
-  margin-left: 40px;
+  margin-left: 47px;
 }
 .ant-steps-dot .ant-steps-item-title,
 .ant-steps-dot.ant-steps-small .ant-steps-item-title {
