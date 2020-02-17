@@ -1308,6 +1308,7 @@ html {
   position: absolute;
   top: 8px;
   right: 16px;
+  padding: 0;
   overflow: hidden;
   font-size: 12px;
   line-height: 22px;
@@ -17050,7 +17051,7 @@ span.ant-radio + * {
   line-height: 1.5;
 }
 .ant-steps-label-vertical.ant-steps-small:not(.ant-steps-dot) .ant-steps-item-icon {
-  margin-left: 47px;
+  margin-left: 46px;
 }
 .ant-steps-dot .ant-steps-item-title,
 .ant-steps-dot.ant-steps-small .ant-steps-item-title {
