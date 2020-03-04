@@ -4190,13 +4190,9 @@ a.ant-btn-sm {
 .ant-picker-calendar-header {
   display: flex;
   justify-content: flex-end;
-  padding: 11px 16px 11px 0;
-}
-.ant-picker-calendar-header .ant-picker-calendar-year-select {
-  min-width: 85px;
+  padding: 12px 0;
 }
 .ant-picker-calendar-header .ant-picker-calendar-month-select {
-  min-width: 70px;
   margin-left: 8px;
 }
 .ant-picker-calendar-header .ant-picker-calendar-mode-switch {
@@ -4213,7 +4209,7 @@ a.ant-btn-sm {
   width: auto;
 }
 .ant-picker-calendar .ant-picker-panel .ant-picker-body {
-  padding: 8px 12px;
+  padding: 8px 0;
 }
 .ant-picker-calendar .ant-picker-panel .ant-picker-content {
   width: 100%;
@@ -4225,16 +4221,6 @@ a.ant-btn-sm {
   height: auto;
   padding: 0;
   line-height: 18px;
-}
-.ant-picker-calendar-full .ant-picker-calendar-header .ant-picker-calendar-year-select {
-  width: 90px;
-}
-.ant-picker-calendar-full .ant-picker-calendar-header .ant-picker-calendar-month-select {
-  width: 80px;
-  margin-left: 8px;
-}
-.ant-picker-calendar-full .ant-picker-calendar-header .ant-picker-calendar-mode-switch {
-  margin-left: 16px;
 }
 .ant-picker-calendar-full .ant-picker-panel {
   display: block;
@@ -4302,6 +4288,26 @@ a.ant-btn-sm {
 }
 .ant-picker-calendar-full .ant-picker-panel .ant-picker-calendar-date-today .ant-picker-calendar-date-value {
   color: rgba(0, 0, 0, 0.65);
+}
+@media only screen and (max-width: 480px) {
+  .ant-picker-calendar-header {
+    display: block;
+  }
+  .ant-picker-calendar-header .ant-picker-calendar-year-select {
+    width: 50%;
+  }
+  .ant-picker-calendar-header .ant-picker-calendar-month-select {
+    width: calc(50% - 8px);
+  }
+  .ant-picker-calendar-header .ant-picker-calendar-mode-switch {
+    width: 100%;
+    margin-top: 8px;
+    margin-left: 0;
+  }
+  .ant-picker-calendar-header .ant-picker-calendar-mode-switch > label {
+    width: 50%;
+    text-align: center;
+  }
 }
 .ant-card {
   box-sizing: border-box;
@@ -7077,6 +7083,7 @@ textarea.ant-picker-input > input {
 }
 .ant-dropdown-menu-item .ant-dropdown-menu-submenu-arrow-icon,
 .ant-dropdown-menu-submenu-title .ant-dropdown-menu-submenu-arrow-icon {
+  margin-right: 0;
   color: rgba(0, 0, 0, 0.45);
   font-style: normal;
   display: inline-block;
@@ -7088,11 +7095,11 @@ textarea.ant-picker-input > input {
   list-style: none;
 }
 .ant-dropdown-menu-submenu-title {
-  padding-right: 26px;
+  padding-right: 24px;
 }
 .ant-dropdown-rtl .ant-dropdown-menu-submenu-title {
   padding-right: 12px;
-  padding-left: 26px;
+  padding-left: 24px;
 }
 .ant-dropdown-menu-submenu-vertical {
   position: relative;
@@ -8003,6 +8010,7 @@ textarea.ant-picker-input > input {
 }
 .ant-form-item-control-input-content {
   flex: auto;
+  max-width: 100%;
 }
 .ant-form-item-explain,
 .ant-form-item-extra {
@@ -13854,6 +13862,9 @@ textarea.ant-input {
   border: 1px solid #d9d9d9;
   border-left: 0;
 }
+.ant-input-search-enter-button.ant-input-affix-wrapper {
+  border-right: 0;
+}
 .ant-input-search-enter-button + .ant-input-group-addon,
 .ant-input-search-enter-button input + .ant-input-group-addon {
   padding: 0;
@@ -14527,7 +14538,6 @@ textarea.ant-input-number {
 .ant-list-bordered .ant-list-item {
   padding-right: 24px;
   padding-left: 24px;
-  border-bottom: 1px solid #f0f0f0;
 }
 .ant-list-bordered .ant-list-pagination {
   margin: 16px 24px;
@@ -14907,8 +14917,10 @@ textarea.ant-mentions {
   transition: background 0.3s cubic-bezier(0.645, 0.045, 0.355, 1), padding 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 .ant-menu-item > a {
-  display: block;
   color: rgba(0, 0, 0, 0.65);
+}
+.ant-menu-item > a:only-child {
+  display: block;
 }
 .ant-menu-item > a:hover {
   color: #1890ff;
@@ -15210,8 +15222,10 @@ textarea.ant-mentions {
   border-bottom: 2px solid #1890ff;
 }
 .ant-menu-horizontal > .ant-menu-item > a {
-  display: block;
   color: rgba(0, 0, 0, 0.65);
+}
+.ant-menu-horizontal > .ant-menu-item > a:only-child {
+  display: block;
 }
 .ant-menu-horizontal > .ant-menu-item > a:hover {
   color: #1890ff;
@@ -15373,6 +15387,9 @@ textarea.ant-mentions {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+}
+.ant-menu-inline-collapsed .anticon {
+  display: block;
 }
 .ant-menu-item-group-list {
   margin: 0;
@@ -17113,6 +17130,7 @@ textarea.ant-pagination-options-quick-jumper input {
   font-feature-settings: 'tnum';
   display: inline-block;
   line-height: unset;
+  white-space: nowrap;
 }
 .ant-radio-group-rtl {
   direction: rtl;
@@ -19963,7 +19981,7 @@ span.ant-radio + * {
   background: #f5f5f5;
 }
 td.ant-table-column-sort {
-  background: rgba(0, 0, 0, 0.01);
+  background: #fafafa;
 }
 .ant-table-column-sorters {
   display: inline-flex;
