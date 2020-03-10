@@ -39,7 +39,7 @@ const config: ConfigurationFactory = (_env, { mode }) => {
       app: './src/index.tsx',
     },
     output: {
-      publicPath: '/',
+      publicPath: './',
       path: path.resolve(__filename, '../', 'public'),
       filename: '[name]-[hash].js',
     },
