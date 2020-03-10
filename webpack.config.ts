@@ -1,13 +1,13 @@
 import path from 'path'
 
-import webpack, { ConfigurationFactory } from 'webpack'
+import webpack, { ConfigurationFactory, Configuration } from 'webpack'
 import { Configuration as DevServerConfiguration } from 'webpack-dev-server'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 import { CleanWebpackPlugin } from 'clean-webpack-plugin'
 
 const config: ConfigurationFactory = (_env, { mode }) => {
-  const plugins = [
+  const plugins: Configuration['plugins'] = [
     new webpack.HotModuleReplacementPlugin(),
     new webpack.ProgressPlugin(),
     new MiniCssExtractPlugin({
