@@ -7,6 +7,6 @@
     "monorepo:babel6",
     "schedule:daily"
   ],
-  "automerge": true,
+  "automerge": false,
   "labels": ["dependency"]
 }
