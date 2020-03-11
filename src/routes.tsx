@@ -18,7 +18,7 @@ const Example = () => {
 }
 
 export const Routes = () => (
-  <BrowserRouter>
+  <BrowserRouter basename="/react-playground">
     <Switch>
       <Route component={Example} path="/" exact />
     </Switch>
