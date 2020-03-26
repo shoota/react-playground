@@ -56,7 +56,7 @@
     "@types/react-test-renderer": "16.9.2",
     "@types/styled-components": "5.0.1",
     "@types/webpack": "4.41.7",
-    "@types/webpack-dev-server": "3.10.0",
+    "@types/webpack-dev-server": "3.10.1",
     "@typescript-eslint/eslint-plugin": "2.22.0",
     "@typescript-eslint/parser": "2.22.0",
     "awesome-typescript-loader": "5.2.1",
