@@ -24,8 +24,8 @@ jobs:
       run: yarn tsc
       env:
         CI: true
-    - name: storybook
-      run: yarn build-storybook
+    - name: bundle
+      run: yarn build
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
       with:
