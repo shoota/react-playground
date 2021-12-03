@@ -1,19 +1,31 @@
-import { text } from '@storybook/addon-knobs'
-import { storiesOf } from '@storybook/react'
-import { Button } from 'antd'
+import { ComponentStory, ComponentMeta } from '@storybook/react'
 import * as React from 'react'
 
-import { MarginCard, Wrapper } from '../common'
+import { Todos } from '../Todos'
 
-storiesOf('story/usage', module).add('default', () => {
-  return (
-    <Wrapper>
-      <MarginCard title="First">
-        <Button>{text('first', '1st')}</Button>
-      </MarginCard>
-      <MarginCard title="Second">
-        <Button>{text('second', '2nd')}</Button>
-      </MarginCard>
-    </Wrapper>
-  )
-})
+const todos = [
+  {
+    id: 1,
+    contents: 'should do',
+    finished: false,
+  },
+  {
+    id: 2,
+    contents: 'done is better',
+    finished: true,
+  },
+]
+
+const meta: ComponentMeta<typeof Todos> = {
+  title: 'Example/Todos',
+  component: Todos,
+  args: {
+    todos,
+  },
+}
+
+export default meta
+
+const Template: ComponentStory<typeof Todos> = (args) => <Todos {...args} />
+
+export const Main = Template.bind({})
