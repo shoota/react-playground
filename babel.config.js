@@ -10,9 +10,4 @@ module.exports = {
     '@babel/typescript',
     '@babel/react',
   ],
-  plugins: [
-    '@babel/plugin-proposal-optional-chaining',
-    '@babel/proposal-class-properties',
-    '@babel/proposal-object-rest-spread',
-  ],
 }

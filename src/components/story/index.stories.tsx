@@ -1,4 +1,4 @@
-import { storiesOf } from '@storybook/react'
+import { ComponentStory, ComponentMeta } from '@storybook/react'
 import * as React from 'react'
 
 import { Todos } from '../Todos'
@@ -10,12 +10,22 @@ const todos = [
     finished: false,
   },
   {
-    id: 1,
+    id: 2,
     contents: 'done is better',
     finished: true,
   },
 ]
 
-storiesOf('story/usage', module).add('default', () => {
-  return <Todos todos={todos} />
-})
+const meta: ComponentMeta<typeof Todos> = {
+  title: 'Example/Todos',
+  component: Todos,
+  args: {
+    todos,
+  },
+}
+
+export default meta
+
+const Template: ComponentStory<typeof Todos> = (args) => <Todos {...args} />
+
+export const Main = Template.bind({})
