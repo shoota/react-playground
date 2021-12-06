@@ -1,26 +1,19 @@
 import React from 'react'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
-import { Card } from 'antd'
-import styled from 'styled-components'
 
-const Wrapper = styled.div`
-  margin: 40px;
-`
+import { HomeContainer } from './container/Home'
 
-const Example = () => {
-  return (
-    <Wrapper>
-      <Card title="hello react">
-        <h1>webpack Example</h1>
-      </Card>
-    </Wrapper>
-  )
-}
+import { TodosContainer } from 'container/Todos'
 
 export const Routes = () => (
   <BrowserRouter>
     <Switch>
-      <Route component={Example} path="/" exact />
+      <Route component={HomeContainer} path="/" exact />
+      <Route
+        component={() => <TodosContainer fetchPolicy="network-only" />}
+        path="/network-only"
+        exact
+      />
     </Switch>
   </BrowserRouter>
 )

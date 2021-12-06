@@ -10,7 +10,7 @@ type Todo = {
 
 type Props = {
   isLoading?: boolean
-  todos: Todo[]
+  todos?: Todo[]
 }
 
 export const Todos: React.VFC<Props> = ({ todos, isLoading }) => {
