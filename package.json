@@ -47,7 +47,7 @@
     "@graphql-codegen/typescript": "1.23.0",
     "@graphql-codegen/typescript-operations": "1.18.4",
     "@graphql-codegen/typescript-react-apollo": "2.3.1",
-    "@hot-loader/react-dom": "16.13.0",
+    "@hot-loader/react-dom": "16.14.0",
     "@storybook/addon-actions": "^6.4.5",
     "@storybook/addon-essentials": "^6.4.5",
     "@storybook/addon-links": "^6.4.5",
