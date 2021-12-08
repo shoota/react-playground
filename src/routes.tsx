@@ -9,11 +9,7 @@ export const Routes = () => (
   <BrowserRouter>
     <Switch>
       <Route component={HomeContainer} path="/" exact />
-      <Route
-        component={() => <TodosContainer fetchPolicy="network-only" />}
-        path="/network-only"
-        exact
-      />
+      <Route component={() => <TodosContainer />} path="/:fetchPolicy" exact />
     </Switch>
   </BrowserRouter>
 )

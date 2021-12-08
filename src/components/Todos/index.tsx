@@ -15,6 +15,7 @@ type Props = {
 }
 
 export const Todos: React.VFC<Props> = ({ todos, isLoading, getContent }) => {
+  console.log(isLoading, new Date())
   return (
     <Card title="TODO List">
       <Button onClick={getContent}>データを取る</Button>
