@@ -27,6 +27,16 @@ export const HomeContainer = () => {
               <Typography.Link href={`/${policy}`}>{policy}</Typography.Link>
             </li>
           ))}
+          <li key="read-query-network-only">
+            <Typography.Link href="/read-query-network-only">
+              Read Query after network-only
+            </Typography.Link>
+          </li>
+          <li key="read-query-no-cache">
+            <Typography.Link href="/read-query-no-cache">
+              Read Query after no-cache
+            </Typography.Link>
+          </li>
         </ul>
       </Card>
     </Wrapper>
