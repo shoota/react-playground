@@ -93,7 +93,3 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
-
-
-src/graphql/api.ts
-src/graphql/introspection-result.ts

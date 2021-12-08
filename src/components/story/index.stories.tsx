@@ -6,13 +6,18 @@ import { Todos } from '../Todos'
 const todos = [
   {
     id: 1,
-    contents: 'should do',
-    finished: false,
+    contents: '宇宙空間に行く',
+    finished: true,
   },
   {
     id: 2,
-    contents: 'done is better',
-    finished: true,
+    contents: '月旅行に行く',
+    finished: false,
+  },
+  {
+    id: 3,
+    contents: '本を書く',
+    finished: false,
   },
 ]
 
